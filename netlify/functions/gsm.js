@@ -1,22 +1,17 @@
-import fetch from "node-fetch";
-
 export async function handler(event, context) {
   try {
     const API_KEY = process.env.GSM_API_KEY;
     const USERNAME = process.env.GSM_USERNAME;
 
-    const response = await fetch(
-      "https://gsmmanager.com/public/api/services",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "api-key": API_KEY,
-          "user-name": USERNAME
-        },
-        body: JSON.stringify({})
-      }
-    );
+    const response = await fetch("https://gsmmanager.com/public/api/services", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "api-key": API_KEY,
+        "user-name": USERNAME
+      },
+      body: "{}"
+    });
 
     const json = await response.json();
 
@@ -28,7 +23,7 @@ export async function handler(event, context) {
   } catch (err) {
     return {
       statusCode: 500,
-      body: JSON.stringify({ error: err.toString() })
+      body: JSON.stringify({ error: err.message })
     };
   }
 }
