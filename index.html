@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<!-- saved from url=(0034)https://serverlubcell.netlify.app/ -->
+<html lang="pt-BR"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LUBCELL SERVER</title>
+  <style>
+    /* ===== Estilo Geral (mantido do original) ===== */
+    body {
+      margin: 0;
+      font-family: "Poppins", Arial, sans-serif;
+      background-color: #0b132b;
+      color: #f4f7ff;
+      line-height: 1.6;
+    }
+
+    a { color: #4da8ff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    h1, h2 { color: #4da8ff; }
+
+    header {
+      background: linear-gradient(135deg, #0b132b, #1c2541);
+      text-align: center;
+      padding: 60px 20px 40px;
+      border-bottom: 3px solid #4da8ff;
+    }
+    header h1 { font-size: 2.2em; margin-bottom: 10px; animation: brilhar 2s infinite alternate; }
+    @keyframes brilhar {
+      from { text-shadow: 0 0 5px #4da8ff, 0 0 10px #4da8ff; }
+      to { text-shadow: 0 0 20px #76c7ff, 0 0 30px #76c7ff; }
+    }
+    header p { font-size: 1.1em; color: #d0e0ff; }
+
+    section { padding: 40px 20px; max-width: 1000px; margin: 0 auto; }
+    section h2 { border-left: 6px solid #4da8ff; padding-left: 12px; margin-bottom: 20px; }
+
+    .servico {
+      background: #1c2541;
+      border-left: 4px solid #4da8ff;
+      margin: 15px 0;
+      padding: 15px 20px;
+      border-radius: 8px;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+    .servico:hover { transform: translateX(5px); background: #243b64; }
+
+    .contato a {
+      display: inline-block;
+      background: #4da8ff;
+      color: #0b132b;
+      padding: 10px 16px;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .contato a:hover { background: #76c7ff; }
+
+    footer {
+      background: #1c2541;
+      text-align: center;
+      padding: 20px;
+      color: #b8c6e2;
+      font-size: 0.9em;
+      border-top: 2px solid #4da8ff;
+    }
+
+    #voltarInicio {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      padding: 12px 18px;
+      background: #4da8ff;
+      color: #0b132b;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      display: none;
+      z-index: 1000;
+      transition: 0.3s;
+    }
+    #voltarInicio:hover { background: #76c7ff; }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+      header h1 { font-size: 1.8em; }
+      section { padding: 30px 15px; }
+      .servico { font-size: 0.95em; }
+    }
+
+    /* Estilos para a aba de serviços (injetados também nas páginas geradas) */
+    .imei-wrap { font-family: Arial, sans-serif; padding: 18px; background: #071025; color: #eaf3ff; }
+    .imei-header { display:flex; justify-content:space-between; align-items:center; gap:12px; }
+    .imei-header h1 { color:#4da8ff; margin:0; font-size:20px; }
+    .service-card { background:#0f2340; border-left:4px solid #4da8ff; padding:12px; margin:10px 0; border-radius:8px; }
+    .service-title { font-weight:700; color:#bfe4ff; margin-bottom:6px; }
+    .service-meta { font-size:13px; color:#d0e6ff; margin-bottom:8px; }
+    .service-actions { display:flex; gap:8px; flex-wrap:wrap; justify-content:center; } /* centraliza botões */
+    .btn { padding:8px 12px; border-radius:6px; text-decoration:none; font-weight:600; border:none; cursor:pointer; }
+    .btn-whatsapp { background:#25D366; color:#042022; display:inline-block; }
+    .btn-close { background:#4da8ff; color:#031022; }
+    .category { margin-top:14px; font-weight:700; color:#76c7ff; }
+    .small { font-size:13px; color:#cfe9ff; margin-top:6px; }
+  </style>
+<style type="text/css" id="operaUserStyle"></style><style type="text/css">:root img[width="728"][height="90"], :root [href="https://adstub.net/cina777/"], :root [href="https://adstub.net/arab777/"], :root [href="https://adstub.net/ratu89/"], :root [href="https://adstub.net/judi89/"], :root [href^="//mage98rquewz.com/"], :root [href^="//x4pollyxxpush.com/"], :root span[id^="ezoic-pub-ad-placeholder-"], :root ins.adsbygoogle[data-ad-slot], :root ins.adsbygoogle[data-ad-client], :root img[src^="https://s-img.adskeeper.com/"], :root guj-ad, :root gpt-ad, :root div[id^="zergnet-widget"], :root div[id^="vuukle-ad-"], :root div[id^="taboola-stream-"], :root div[id^="sticky_ad_"], :root div[id^="st"][style^="z-index: 999999999;"], :root div[id^="gpt_ad_"], :root div[id^="ezoic-pub-ad-"], :root div[id^="dfp-ad-"], :root div[id^="crt-"][style], :root div[id^="apn_native_ad_slot_"], :root div[id^="adspot-"], :root div[id^="adrotate_widgets-"], :root ps-connatix-module, :root div[id^="ad_position_"], :root div[id^="ad-div-"], :root div[id*="ScriptRoot"], :root div[id*="MarketGid"], :root [href="https://adstub.net/rusia777/"], :root div[data-id-advertdfpconf], :root div[data-dfp-id], :root hl-adsense, :root div[data-contentexchange-widget], :root div[data-alias="300x250 Ad 2"], :root div[data-adzone], :root div[data-adunit-path], :root div[data-adname], :root div[data-ad-targeting], :root div[data-ad-region], :root div[data-ad-placeholder], :root div[aria-label="Ads"], :root display-ads, :root display-ad-component, :root atf-ad-slot, :root aside[id^="adrotate_widgets-"], :root amp-fx-flying-carpet, :root amp-embed[type="taboola"], :root amp-connatix-player, :root amp-ad-custom, :root amp-ad, :root div[id^="google_dfp_"], :root ad-slot, :root ad-shield-ads, :root a[style="width:100%;height:100%;z-index:10000000000000000;position:absolute;top:0;left:0;"], :root a[onmousedown^="this.href='https://paid.outbrain.com/network/redir?"] + .ob_source, :root a[onclick^="window.location.replace('https://random-affiliate.atimaze.com/"], :root a[href^="https://xbet-4.com/"], :root div[id^="ad-position-"], :root a[href^="https://www.toprevenuegate.com/"], :root a[href^="https://www.purevpn.com/"][href*="&utm_source=aff-"], :root a[href^="https://www.privateinternetaccess.com/"] > img, :root a[href^="https://financeads.net/tc.php?"], :root a[href^="https://www.mrskin.com/tour"], :root a[href^="https://www.infowarsstore.com/"] > img, :root a[href^="https://www.highperformancecpmgate.com/"], :root a[href^="https://www.highcpmrevenuenetwork.com/"], :root a[href^="https://www.get-express-vpn.com/offer/"], :root a[href^="https://lnkxt.bannerator.com/"], :root a[href^="https://www.geekbuying.com/dynamic-ads/"], :root a[href^="https://www.financeads.net/tc.php?"], :root a[href^="https://www.effectiveratecpm.com/"], :root [href^="https://www.herbanomic.com/"] > img, :root a[href^="https://maymooth-stopic.com/"], :root a[href^="https://www.dql2clk.com/"], :root a[href^="https://www.nutaku.net/signup/landing/"], :root a[href^="https://www.dating-finder.com/signup/?ai_d="], :root a[href^="https://explore-site.com/"], :root a[href^="https://www.brazzersnetwork.com/landing/"], :root [data-template-type="nativead"], :root a[href^="https://www.endorico.com/Smartlink/"], :root a[href^="https://www.adultempire.com/"][href*="?partner_id="], :root a[href^="https://voluum.prom-xcams.com/"], :root a[href^="https://twinrdsyte.com/"], :root a[href^="https://twinrdsrv.com/"], :root a[href^="https://trk.nfl-online-streams.club/"], :root a[href^="https://tracking.avapartner.com/"], :root a[href^="https://track.wg-aff.com"], :root a[href^="https://track.ultravpn.com/"], :root a[href^="https://track.afcpatrk.com/"], :root a[href^="https://torguard.net/aff.php"] > img, :root [data-identity="adhesive-ad"], :root a[href^="https://tc.tradetracker.net/"] > img, :root a[href^="https://tatrck.com/"], :root a[href^="https://click.candyoffers.com/"], :root [href^="https://zstacklife.com/"] img, :root a[href^="https://t.aslnk.link/"], :root a[href^="https://t.adating.link/"], :root a[href^="https://go.trackitalltheway.com/"], :root [href^="https://track.fiverr.com/visit/"] > img, :root a[href^="https://syndication.exoclick.com/"], :root a[href^="https://syndication.dynsrvtbg.com/"], :root div[data-alias="300x250 Ad 1"], :root a[href^="https://syndicate.contentsserved.com/"], :root a[href^="https://svb-analytics.trackerrr.com/"], :root a[href^="https://track.aftrk5.com/"], :root a[href^="https://slkmis.com/"], :root a[href^="https://myclick-2.com/"], :root a[href^="https://sexynearme.com/"], :root [data-ad-manager-id], :root a[href^="https://s.zlinkr.com/"], :root bottomadblock, :root a[href^="https://s.zlinkd.com/"], :root [href="https://adstub.net/gaza88/"], :root a[href^="https://ad.doubleclick.net/"], :root a[href^="https://static.fleshlight.com/images/banners/"], :root a[href^="https://s.zlink7.com/"], :root a[href^="https://s.zlink3.com/"], :root a[href^="https://www.mrskin.com/account/"], :root a[href^="https://s.optzsrv.com/"], :root a[href^="https://s.ma3ion.com/"], :root a[href^="https://s.eunow4u.com/"], :root #kt_player > div[style$="display: block;"][style*="inset: 0px;"], :root [href$="/sexdating.php"], :root a[href^="https://quotationfirearmrevision.com/"], :root a[href^="https://pubads.g.doubleclick.net/"], :root a[href^="https://prf.hn/click/"][href*="/camref:"] > img, :root a[href^="https://www.dating-finder.com/?ai_d="], :root a[href^="https://serve.awmdelivery.com/"], :root a[href^="https://prf.hn/click/"][href*="/adref:"] > img, :root app-ad, :root [href^="https://ap.octopuspop.com/click/"] > img, :root a[href^="https://postback1win.com/"], :root a[href^="https://mmwebhandler.aff-online.com/"], :root a[href^="https://www.bet365.com/"][href*="affiliate="], :root a[href^="https://pb-track.com/"], :root a[href^="https://pb-front.com/"], :root a[href^="https://paid.outbrain.com/network/redir?"], :root a[href^="https://streamate.com/landing/click/"], :root div[class^="Adstyled__AdWrapper-"], :root a[href^="https://osfultrbriolenai.info/"], :root a[href^="https://upsups.click/"], :root a[href^="https://ndt5.net/"], :root a[href^="https://natour.naughtyamerica.com/track/"], :root a[href^="https://mediaserver.entainpartners.com/renderBanner.do?"], :root a[href^="https://lead1.pl/"], :root a[href^="https://landing.brazzersnetwork.com/"], :root a[href^="https://join.virtuallust3d.com/"], :root a[href^="https://kiksajex.com/"], :root a[href^="https://juicyads.in/"], :root a[href^="https://snowdayonline.xyz/"], :root a[href^="https://mediaserver.gvcaffiliates.com/renderBanner.do?"], :root a[href^="https://join.dreamsexworld.com/"], :root a[href^="https://join.bannedsextapes.com/track/"], :root a[href^="https://jaxofuna.com/"], :root a[href^="https://italarizege.xyz/"], :root a[href^="https://iqbroker.com/"][href*="?aff="], :root a[href^="https://identicaldrench.com/"], :root a[href^="https://hot-growngames.life/"], :root a[href^="https://helmethomicidal.com/"], :root a[href^="https://golinks.work/"], :root a[href^="https://s.zlinkn.com/"], :root a[href^="https://go.xxxvjmp.com/"], :root a[href^="https://go.xxxjmp.com"], :root [class^="tile-picker__CitrusBannerContainer-sc-"], :root a[href^="https://go.xxxiijmp.com"], :root a[href^="https://go.xtbaffiliates.com/"], :root [data-role="tile-ads-module"], :root a[href^="https://go.xlviirdr.com"], :root div[class$="-adlabel"], :root a[href^="https://go.xlviiirdr.com"], :root a[href^="https://ismlks.com/"], :root [href^="https://www.mypillow.com/"] > img, :root a[href^="https://go.xlirdr.com"], :root [data-css-class="dfp-inarticle"], :root a[href^="https://l.hyenadata.com/"], :root a[href^="https://go.tmrjmp.com"], :root a[href^="https://zirdough.net/"], :root a[href^="https://s.deltraff.com/"], :root a[href^="https://go.markets.com/visit/?bta="], :root a[href^="https://billing.purevpn.com/aff.php"] > img, :root a[href^="https://go.hpyrdr.com/"], :root a[href^="https://lijavaxa.com/"], :root a[href^="https://go.goaserv.com/"], :root a[href^="https://t.hrtye.com/"], :root a[href^="https://go.etoro.com/"] > img, :root a[href^="https://go.dmzjmp.com"], :root a[href^="https://www.bang.com/?aff="], :root #mgb-container > #mgb, :root a[href^="https://go.admjmp.com"], :root a[href^="https://ak.stikroltiltoowi.net/"], :root a[href^="https://get.surfshark.net/aff_c?"][href*="&aff_id="] > img, :root a[href^="https://www.adskeeper.com"], :root a[data-redirect^="https://paid.outbrain.com/network/redir?"], :root [href^="https://clicks.affstrack.com/"] > img, :root a[href^="https://engine.phn.doublepimp.com/"], :root a[href^="https://engine.blueistheneworanges.com/"], :root a[href^="https://drumskilxoa.click/"], :root a[href^="https://dl-protect.net/"], :root a[href*=".foxqck.com/"], :root a[href^="https://ctosrd.com/"], :root a[href^="https://clixtrac.com/"], :root [href^="https://noqreport.com/"] > img, :root a[href^="https://clicks.pipaffiliates.com/"], :root app-advertisement, :root a[href^="https://getmatchedlocally.com/"], :root a[href^="https://clickins.slixa.com/"], :root a[href^="https://datewhisper.life/"], :root a[href^="https://get-link.xyz/"], :root a[href^="https://click.linksynergy.com/fs-bin/"] > img, :root a[href^="https://combodef.com/"], :root a[href^="https://click.hoolig.app/"], :root a[href^="https://www.onlineusershielder.com/"], :root a[href^="https://click.ggpickaff.com/"], :root a[href^="https://track.totalav.com/"], :root a[href^="https://ctrdwm.com/"], :root img[src^="https://images.purevpnaffiliates.com"], :root a[href^="https://porntubemate.com/"], :root a[href^="https://clickadilla.com/"], :root a[href^="https://click.dtiserv2.com/"], :root a[href^="https://www.adxsrve.com/"], :root a[href^="https://click.Ggpickaff.com/"], :root a[href^="https://go.xlvirdr.com"], :root a[href^="http://www.iyalc.com/"], :root a[href^="https://stardomcoit.com/"], :root a[href^="https://claring-loccelkin.com/"], :root a[href^="https://bongacams2.com/track?"], :root a[href^="https://t.ajrkm1.com/"], :root a[href^="https://bongacams10.com/track?"], :root a[href^="https://www.sheetmusicplus.com/"][href*="?aff_id="], :root a[href^="https://bngpt.com/"], :root a[href^="//hoodingluster.com/"], :root a[href^="https://black77854.com/"], :root a[href^="http://annulmentequitycereals.com/"], :root [data-taboola-options], :root a[href^="https://believessway.com/"], :root a[href^="https://Click.ggpickaff.com/"], :root a[href^="https://banners.livepartners.com/"], :root a[href^="http://revolvemockerycopper.com/"], :root a[href^="https://awptjmp.com/"], :root a[href^="https://join.sexworld3d.com/track/"], :root a[href^="https://aweptjmp.com/"], :root a[href^="https://ausoafab.net/"], :root a[href^="https://aj1070.online/"], :root a[href^="https://bc.game/"], :root a[href^="https://ak.oalsauwy.net/"], :root a[href^="https://a.bestcontentoperation.top/"], :root a[href^="https://adultfriendfinder.com/go/"], :root a[href^="https://ads.planetwin365affiliate.com/"], :root a[href^="https://ads.leovegas.com/"], :root .nya-slot[style], :root a[href^="https://a.bestcontentweb.top/"], :root a[href^="https://a2.adform.net/"], :root a[href^="https://a.candyai.love/"], :root a[href^="https://playnano.online/offerwalls/?ref="], :root a[href^="https://a.adtng.com/"], :root .banner-img > .pbl, :root [data-m-ad-id], :root a[href^="https://a-ads.com/"], :root [id^="ad_slider"], :root a[href^="https://click.ggpickyaff.com/"], :root broadstreet-zone-container, :root a[href^="https://ak.psaltauw.net/"], :root a[href^="https://1winpb.com/"], :root div[id^="rc-widget-"], :root a[href^="https://turnstileunavailablesite.com/"], :root a[href^="https://chaturbate.com/in/?"], :root a[href^="https://prf.hn/click/"][href*="/creativeref:"] > img, :root a[href*="&maxads="], :root a[href^="http://www.adultempire.com/unlimited/promo?"][href*="&partner_id="], :root a[href^="https://1betandgonow.com/"], :root div[id^="optidigital-adslot"], :root [href^="https://wsup.ai/"], :root a[href^="https://123-stream.org/"], :root a[href^="https://in.rabbtrk.com/"], :root a[href^="http://www.h4trck.com/"], :root a[href^="http://www.friendlyduck.com/AF_"], :root a[href^="http://partners.etoro.com/"], :root [href="https://chaturbate.jjgirls.com/"] > img, :root a[href^="http://cam4com.go2cloud.org/aff_c?"], :root a[href^="https://ads.betfair.com/redirect.aspx?"], :root a[href^="http://trk.globwo.online/"], :root a[href^="http://troopsassistedstupidity.com/"], :root a[href^="https://random-affiliate.atimaze.com/"], :root a-ad, :root a[href^="https://offhandpump.com/"], :root a[href^="http://stickingrepute.com/"], :root #slashboxes > .deals-rail, :root a[href^="http://join.brokestraightboys.com/track/"], :root a[href^="http://roadcontagion.com/"], :root a[href^="http://premonitioninventdisagree.com/"], :root [href^="http://mypillow.com/"] > img, :root a[href^="http://bongacams.com/track?"], :root a[href^="https://track.adform.net/"], :root a[href^="http://avthelkp.net/"], :root a[href^="https://a.medfoodhome.com/"], :root a[href^="https://engine.flixtrial.com/"], :root [data-type="ad-vertical"], :root a[href^="//startgaming.net/tienda/" i], :root a[href^="https://a.medfoodsafety.com/"], :root a[href^="//go.eabids.com/"], :root a[href^="//ejitsirdosha.net/"], :root a[href^=" https://www.friendlyduck.com/AF_"], :root [data-cl-spot-id], :root a[href*="/jump/next.php?r="], :root a[href^="https://go.rmishe.com/"], :root [href^="https://ilovemyfreedoms.com/landing-"], :root a[href^="https://syndication.optimizesrv.com/"], :root a[href*="//daichoho.com/"], :root a[href^="https://go.nordvpn.net/aff"] > img, :root .\[\&_\.gdprAdTransparencyCogWheelButton\]\:\!pjra-z-\[5\], :root [href^="http://clicks.totemcash.com/"], :root a[href^="https://ad.zanox.com/ppc/"] > img, :root a[href^="https://lone-pack.com/"], :root [data-d-ad-id], :root a[href*=".engine.adglare.net/"], :root a[href^="https://t.ajrkm3.com/"], :root [href^="https://aads.com/campaigns/"], :root a[href^="//stighoazon.com/"], :root div[id^="lazyad-"], :root a[href^="http://com-1.pro/"], :root [href^="https://www.profitablegatecpm.com/"], :root a[href*=".cfm?domain="][href*="&fp="], :root [data-ad-name], :root a[href^="https://loboclick.com/"], :root a[data-url^="https://vulpix.bet/?ref="], :root a[href^="https://ab.advertiserurl.com/aff/"], :root a[data-oburl^="https://paid.outbrain.com/network/redir?"], :root a[href^="https://go.xlivrdr.com"], :root [onclick^="location.href='https://1337x.vpnonly.site/"], :root [id^="section-ad-banner"], :root a[href^="https://www.goldenfrog.com/vyprvpn?offer_id="][href*="&aff_id="], :root a[href^="https://wmctjd.com/"], :root a[href*="//jjgirls.com/sex/Chaturbate"], :root [id^="ad-wrap-"], :root [href^="https://zone.gotrackier.com/"], :root a[href^="http://sarcasmadvisor.com/"], :root [href^="https://www.restoro.com/"], :root [href^="https://www.targetingpartner.com/"], :root .section-subheader > .section-hotel-prices-header, :root [href^="https://www.hostg.xyz/"] > img, :root a[href^="http://adultfriendfinder.com/go/"], :root a[href^="https://fastestvpn.com/lifetime-special-deal?a_aid="], :root a[href^="https://tour.mrskin.com/"], :root [href^="https://www.brighteonstore.com/products/"] img, :root citrus-ad-wrapper, :root a[href^="https://go.grinsbest.com/"], :root a[href^="https://vo2.qrlsx.com/"], :root [href^="https://www.avantlink.com/click.php"] img, :root [href^="https://wwp.hoqodd.com/redirect-zone/"], :root div[id^="div-ads-"], :root [href^="https://rapidgator.net/article/premium/ref/"], :root [href^="https://join.girlsoutwest.com/"], :root a[href^="https://activate-game.com/"], :root .scroll-fixable.rail-right > .deals-rail, :root [data-wpas-zoneid], :root a[href^="https://track.aftrk3.com/"], :root [href^="https://join3.bannedsextapes.com"], :root a[href^="https://bodelen.com/"], :root a[href*=".g2afse.com/"], :root div[id^="adngin-"], :root [data-rc-widget], :root span[data-ez-ph-id], :root [href^="https://track.aftrk1.com/"], :root [href^="https://join.playboyplus.com/track/"], :root a[href^="https://go.xxxijmp.com"], :root [href^="https://istlnkcl.com/"], :root a[href^="https://t.acam.link/"], :root a[href^="https://go.strpjmp.com/"], :root [href^="https://url.totaladblock.com/"], :root a[href^="https://tm-offers.gamingadult.com/"], :root [href^="https://charmingdatings.life/"], :root [href="https://adstub.net/indo666/"], :root [href^="https://glersakr.com/"], :root a[href^="https://a.bestcontentfood.top/"], :root [href^="https://cpa.10kfreesilver.com/"], :root [data-id^="div-gpt-ad"], :root a[href^="https://tracker.loropartners.com/"], :root [href^="https://awbbjmp.com/"], :root div[ow-ad-unit-wrapper], :root a[data-href^="http://ads.trafficjunky.net/"], :root [data-advadstrackid], :root a[href^="https://www.friendlyduck.com/AF_"], :root [href^="https://ad1.adfarm1.adition.com/"], :root a[href^="https://bngprm.com/"], :root [href^="https://shiftnetwork.infusionsoft.com/go/"] > img, :root a[href^="https://go.bushheel.com/"], :root a[href^="https://ctjdwm.com/"], :root a[href^="https://camfapr.com/landing/click/"], :root div[data-ad-wrapper], :root .gnt_em_vp_c[data-g-s="vp_dk"], :root [href="//sexcams.plus/"], :root [href^="http://www.mypillow.com/"] > img, :root a[href^="https://promerycergerful.com/"], :root #kt_player > a[target="_blank"], :root [href="https://ourgoldguy.com/contact/"] img, :root .ob_container .item-container-obpd, :root [id^="div-gpt-ad"], :root [href="https://jdrucker.com/gold"] > img, :root a[href^="https://join.virtualtaboo.com/track/"], :root [id^="ad_sky"], :root [name^="google_ads_iframe"], :root a[href^="https://www.liquidfire.mobi/"], :root .grid > .container > #aside-promotion, :root DFP-AD, :root [href^="https://go.xlrdr.com"], :root a[href^="https://s.cant3am.com/"], :root [data-testid^="taboola-"], :root [data-testid^="section-AdRowBillboard"], :root a[href^="https://track.1234sd123.com/"], :root zeus-ad, :root [data-testid="prism-ad-wrapper"], :root [href^="https://ad.admitad.com/"], :root [href^="https://mypillow.com/"] > img, :root [data-testid="ad_testID"], :root a[href^="https://trk.softonixs.xyz/"], :root [href^="https://www.mypatriotsupply.com/"] > img, :root [href^="https://antiagingbed.com/discount/"] > img, :root a[href*=".adsrv.eacdn.com/"], :root a[href^="https://go.cmtaffiliates.com/"], :root [href^="https://optimizedelite.com/"] > img, :root [data-testid="adBanner-wrapper"], :root [href^="https://mylead.global/stl/"] > img, :root [href^="https://mypatriotsupply.com/"] > img, :root a[href^="https://go.hpyjmp.com"], :root iframe[scrolling="no"][sandbox*="allow-popups allow-modals"][style^="width: 100%; height: 100%; border: none;"], :root [href^="https://mystore.com/"] > img, :root [href^="https://wct.link/click?"], :root div[data-adunit], :root app-large-ad, :root [href^="https://turtlebids.irauctions.com/"] img, :root a[href^="https://witnessjacket.com/"], :root [data-mobile-ad-id], :root [data-dynamic-ads], :root [class^="amp-ad-"], :root a[href^="http://handgripvegetationhols.com/"], :root a[href^="https://go.rmhfrtnd.com"], :root a[href^="https://go.bbrdbr.com"], :root a[href^="https://fc.lc/ref/"], :root [data-adshim], :root topadblock, :root a[href^="//s.zlinkd.com/"], :root #teaser1[style^="width:autopx;"], :root [href^="https://www.cloudways.com/en/?id"], :root [data-asg-ins], :root a[href^="https://gamingadlt.com/?offer="], :root a[href^="https://rixofa.com/"], :root a[href^="https://best-experience-cool.com/"], :root [data-desktop-ad-id], :root [data-adbridg-ad-class], :root #teaser3[style^="width:autopx;"], :root [data-adblockkey], :root [data-block-type="ad"], :root [data-ad-width], :root [onclick*="content.ad/"], :root AMP-AD, :root [data-ad-cls], :root [data-ez-name], :root a[href^="https://go.mnaspm.com/"], :root a[href^="https://service.bv-aff-trx.com/"], :root a[href^="https://6-partner.com/"], :root [class^="s2nPlayer"], :root [href^="https://affiliate.fastcomet.com/"] > img, :root [class^="adDisplay-module"], :root a[href^="https://adclick.g.doubleclick.net/"], :root [data-freestar-ad][id], :root AD-SLOT, :root a[href^="https://www.googleadservices.com/pagead/aclk?"] > img, :root [data-ad-module], :root a[href^="https://go.skinstrip.net"][href*="?campaignId="], :root #teaser2[style^="width:autopx;"], :root [data-revive-zoneid], :root a[href^="https://losingoldfry.com/"], :root div[id^="div-gpt-"], :root a[href^="https://gml-grp.com/"], :root .ob_dual_right > .ob_ads_header ~ .odb_div, :root a[href^="http://tc.tradetracker.net/"] > img, :root [data-testid="commercial-label-taboola"], :root [class^="div-gpt-ad"], :root a[href^="https://traffdaq.com/"], :root a[href^="https://cam4com.go2cloud.org/"], :root a[href^="http://li.blogtrottr.com/click?"], :root a[href^="https://www8.smartadserver.com/"], :root a[href^="https://pb-imc.com/"], :root a[onmousedown^="this.href='https://paid.outbrain.com/network/redir?"], :root a[href^="https://t.ajump1.com/"], :root a[href^="https://wittered-mainging.com/"], :root #teaser3[style="width: 100%;text-align: center;display: scroll;position:fixed;bottom: 0;margin: 0 auto;z-index: 103;"] { display: none !important; }</style></head>
+<body>
+  <header>
+    <h1>SERVER LUBCELL!</h1>
+    <p>💡 Soluções rápidas e profissionais para o seu celular.<br>
+      Especialistas em desbloqueios, reparos e softwares.</p>
+	  
+	  <button onclick="netlifyIdentity.open()" style="margin-top:20px;padding:10px 18px;border-radius:6px;background:#4da8ff;color:#0b132b;font-weight:bold;cursor:pointer;">
+		Entrar
+	  </button>
+
+    <p id="currentTime">🕒 Hora atual: 00:31</p>
+  </header>
+
+  <section id="servicos">
+    <h2>📱 Serviços Oferecidos</h2>
+
+    <!-- Chamadas das funções que abrem novas abas -->
+    <div class="servico" onclick="openImeiServices()">
+      <strong>🔓 SERVIÇOS DE (IMEI)</strong><br>
+      Desbloqueio seguro e garantido em diversos modelos.
+    </div>
+
+    <div class="servico" onclick="openAluguelServices()">
+      <strong>🔐 SERVIÇOS DE ALUGUEL</strong><br>
+      Ativação De Ferramentas Profissionais De Desbloqueio.
+    </div>
+
+    <div class="servico" onclick="openLicencasDigitais()">
+      <strong>💳 LICENÇAS DIGITAIS</strong><br>
+      Venda e renovação de licenças.
+    </div>
+  </section>
+
+  <section id="sobre">
+    <h2>🧠 Sobre a Lubcell</h2>
+    <p>
+      A <strong>Lubcell Assistência</strong> é especializada em <em>reparo e desbloqueio de smartphones</em>.<br>
+      Atuamos com ferramentas licenciadas e equipe qualificada para garantir <em>resultados rápidos e seguros</em>.
+    </p>
+
+    <ul>
+      <li>✅ Técnicos especializados</li>
+      <li>✅ Atendimento remoto e presencial</li>
+      <li>✅ Ferramentas oficiais e atualizadas</li>
+    </ul>
+  </section>
+
+  <section id="contato" class="contato">
+    <h2>💬 Fale Conosco</h2>
+    <p>📞 <strong>WhatsApp:</strong> <a href="https://wa.me/5521982493591" target="_blank">Clique para conversar</a></p>
+    <p>📧 <strong>E-mail:</strong> lubcellassistencia@gmail.com</p>
+    <p>📍 <strong>Localização:</strong> Atendimento online e presencial (sob consulta)</p>
+    <p>🕓 <strong>Horário de atendimento:</strong><br>
+      Segunda a sábado — 8h às 18h</p>
+  </section>
+
+  <footer>
+    🟦 © 2025 <strong>Lubcell Assistência Técnica — WhatsApp: 55 21 98249-3591</strong>
+  </footer>
+
+  <!-- Botão Voltar ao Início -->
+  <button id="voltarInicio" onclick="window.scrollTo({top:0, behavior:&#39;smooth&#39;});" style="display: none;">⬆ Voltar ao Início</button>
+
+  <script>
+    // Mostrar hora atual
+    function atualizarHora() {
+      const now = new Date();
+      const timeString = now.toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' });
+      document.getElementById("currentTime").textContent = "🕒 Hora atual: " + timeString;
+    }
+    atualizarHora();
+    setInterval(atualizarHora, 60000);
+
+    // Mostrar/ocultar botão "Voltar ao Início" ao rolar
+    const botaoVoltar = document.getElementById('voltarInicio');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 200) {
+        botaoVoltar.style.display = 'block';
+      } else {
+        botaoVoltar.style.display = 'none';
+      }
+    });
+
+    // Número do WhatsApp (fixo conforme confirmado)
+    const WA_NUMBER = '5521982493591';
+
+    // ===== Conteúdo IMEI (completo conforme você enviou) =====
+    const IMEI_SERVICES = [
+      { category: '🔹 SAMSUNG', items: [
+        {
+          title: 'Samsung FRP Remove by IMEI | SN – Level 1',
+          description: 'Unlock FRP Android 10|14 Worldwide',
+          time: '1–10 min',
+          cost: 'R$154,02 credits'
+        },
+        {
+          title: 'Samsung FRP Remove by IMEI | SN – Level 3',
+          description: 'For Devices If Not Work On Level 1 | KG On | USA Old Models | Mexico Devices High Rate 100%',
+          time: '1–10 min',
+          cost: 'R$163,80 credits'
+        }
+      ]},
+      { category: '🟩 XIAOMI', items: [
+        {
+          title: 'Xiaomi Mi Account Remove Clean Worldwide By Unlock Code',
+          description: 'All Models | All Country | Fast Source',
+          time: '1–24 h',
+          cost: 'R$196,38 credits'
+        },
+        {
+          title: 'Xiaomi Mi Account Remove Clean Worldwide By Unlock Code (Without China – Super Fast Source)',
+          description: 'All Models | All Country | Without China | Super Fast Source',
+          time: '1–12 h',
+          cost: 'R$206,41 credits'
+        },
+        {
+          title: 'Xiaomi Mi Account Remove Clean Brazil By Unlock Code',
+          description: 'Brazil | Clean | All Models | Fast Source',
+          time: '1–24 h',
+          cost: 'R$195,20 credits'
+        },
+        {
+          title: 'Xiaomi Check By IMEI | SN | KEY | UNLOCK CODE',
+          description: 'Xiaomi Check Find Device | Country | Lost or Clean | Support New Key | Non Refund',
+          time: '1–24 h',
+          cost: 'R$7,00 credit'
+        }
+      ]},
+      { category: '🟩 APPLE', items: [
+        {
+          title: 'Apple Pro Check Info by IMEI | SN',
+          description: 'Check FMI | Model | Country',
+          time: '1–15 min',
+          cost: 'R$11,26 credits'
+        },
+        {
+          title: 'Apple Master Check SoldBy by IMEI | SN',
+          description: 'Check SoldBy by IMEI or SN',
+          time: '1–15 min',
+          cost: 'R$16,21 credits'
+        },
+        {
+          title: 'Offer HFZ Activator A12+ Premium Bypass No Signal',
+          description: 'Windows Tool | All Models | Put iPhone or iPad in Tool First After Send SN',
+          time: '1–10 min',
+          cost: 'R$65,02 credits'
+        },
+        {
+          title: 'Offer Nothing A12 Bypass No Signal',
+          description: 'Windows Tool | All Models | Put iPhone or iPad in Tool First After Send ECID',
+          time: '1–10 min',
+          cost: 'R$95,03 credits'
+        },
+        {
+          title: 'Offer iRemoval Pro v5.2.1 A12+ Bypass No Signal',
+          description: 'Windows Tool | iOS 18.6 – 26.0.1 | All Models | Put iPhone or iPad in Tool First After Send SN',
+          time: '1–10 min',
+          cost: 'R$115,41 credits'
+        },
+        {
+          title: 'Offer iRemove Tools A12+ Bypass No Signal',
+          description: 'Mac Tool | All Models | Put iPhone or iPad in Tool First After Send SN',
+          time: '1–10 min',
+          cost: 'R$110,56 credits'
+        },
+        {
+          title: 'Offer Aldaz Tool A12+ Premium Bypass No Signal',
+          description: 'Mac Tool | All Models | Put iPhone or iPad in Tool First After Send SN',
+          time: '1–10 min',
+          cost: 'R$100,80 credits'
+        }
+      ]}
+    ];
+
+    // ===== Conteúdo ALUGUEL (completo conforme você enviou) =====
+    const ALUGUEL_SERVICES = [
+      { title: 'TR PRO TOOLS 12H RENT', description: 'ID/PASSWORD', time: 'INSTANT', cost: 'R$27,70' },
+      { title: 'TSM TOOLS 10H RENT', description: 'ID/PASSWORD', time: 'INSTANT', cost: '21,80' },
+      { title: 'UAT PRO TOOL 3H RENT', description: 'ID/PASSWORD', time: 'INSTANT', cost: 'R$21,80' },
+      { title: 'UNLOCK TOOL 6H RENT SOURCE 1', description: 'ID/PASSWORD', time: 'INSTANT', cost: 'R$10,00' },
+      { title: 'UNLOCK TOOL 6H RENT SOURCE 2', description: 'ID/PASSWORD', time: 'INSTANT', cost: 'R$20,00' },
+      { title: 'DFT PRO TOOL 48H RENT', description: 'ID/PASSWORD', time: 'INSTANT', cost: 'R$27,80' },
+      { title: 'PANDORA DIGITAL LOGIN 1M RENT', description: 'ID/PASSWORD', time: 'INSTANT', cost: 'R$185,20' },
+      { title: 'PANDORA DIGITAL LOGIN 2M RENT', description: 'ID/PASSWORD', time: 'INSTANT', cost: 'R$244,20' },
+      { title: 'PHOENIX KEY TOOL 2H RENT', description: 'ID/PASSWORD', time: 'INSTANT', cost: 'R$10,90' },
+      { title: 'RTC TOOL 6H RENT', description: 'ID/PASSWORD', time: 'INSTANT', cost: 'R$21,70' },
+      { title: 'SCORPION TOOL 48H RENT', description: 'ID/PASSWORD', time: 'INSTANT', cost: 'R$49,50' },
+      { title: 'TFM TOOL 6H RENT', description: 'ID/PASSWORD', time: 'INSTANT', cost: 'R$21,90' },
+      { title: 'KG KILLER TOOL 2H RENT', description: 'ID/PASSWORD', time: 'INSTANT', cost: 'R$21,70' },
+      { title: 'MDM FIX PRO TOOL 6H RENT', description: 'ID/PASSWORD', time: 'INSTANT', cost: 'R$27,75' },
+      { title: 'MDM FIX TOOL 6H RENT', description: 'ID/PASSWORD', time: 'INSTANT', cost: 'R$27,95' },
+      { title: 'MRT TOOL 24H RENT', description: 'ID/PASSWORD', time: 'INSTANT', cost: 'R$21,95' },
+      { title: 'MOBILE SEA SERVICE TOOL 6H RENT', description: 'ID/PASSWORD', time: 'INSTANT', cost: 'R$21,55' },
+      { title: 'PANDORA DIGITAL LOGIN 48H RENT', description: 'ID/PASSWORD', time: 'INSTANT', cost: 'R$108,50' },
+      { title: 'CF TOOLS 12H RENT', description: 'ID/PASSWORD', time: 'INSTANT', cost: 'R$22,00' },
+      { title: 'CHEETAH TOOL 4H RENT', description: 'ID/PASSWORD', time: 'INSTANT', cost: 'R$21,99' },
+      { title: 'CHIMERA TOOL 48H RENT', description: 'ID/PASSWORD', time: 'INSTANT', cost: 'R$185,20' },
+      { title: 'GRIFFIN UNLOCKER TOOL 6H RENT', description: 'ID/PASSWORD', time: 'INSTANT', cost: 'R$27,95' },
+      { title: 'GRIFFIN UNLOCKER TOOL PACK PREMIUM 5H RENT', description: 'ID/PASSWORD', time: 'INSTANT', cost: 'R$33,65' },
+      { title: 'HYDRA TOOL WITHOUT DONGLE 2H RENT', description: 'ID/PASSWORD', time: 'INSTANT', cost: 'R$35,50' },
+      { title: 'ANDROID MULTI TOOL 2H RENT SOURCE 1', description: 'ID/PASSWORD', time: 'INSTANT', cost: 'R$11,00' },
+      { title: 'ANDROID MULTI TOOL 2H RENT SOURCE 2', description: 'ID/PASSWORD', time: 'INSTANT', cost: 'R$22,50' },
+      { title: 'ANDROID WIN TOOL 48H RENT', description: 'ID/PASSWORD', time: 'INSTANT', cost: 'R$27,95' },
+      { title: 'ANONYSHU TOOL 12H RENT', description: 'ID/PASSWORD', time: 'INSTANT', cost: 'R$35,65' },
+      { title: 'APIZU MDM PRO TOOL 2H RENT', description: 'ID/PASSWORD', time: 'INSTANT', cost: 'R$28,95' },
+      { title: 'ARAB FRP TOOL 2H RENT', description: 'ID/PASSWORD', time: 'INSTANT', cost: 'R$22,95' }
+    ];
+
+    // ===== Conteúdo LICENÇAS (conforme sua lista anterior) =====
+    const LICENCAS_SERVICES = [
+      { title: 'PHOENIX SERVICE TOOL CREDIT AUTO', description: 'FLASH | FRP | FACTORY – EXISTING USER ONLY – PUT QUANTITY AND EMAIL – DIRECT SOURCE', time: 'INSTANT', cost: 'R$15,67' },
+      { title: 'GLOBAL AUTH TOOL CREDIT AUTO', description: 'FLASH | EFS | FRP | FDL – EXISTING USER ONLY – PUT QUANTITY AND USERNAME – DIRECT SOURCE', time: 'INSTANT', cost: 'R$15,80' },
+      { title: 'PIXEL TOOL CREDIT AUTO', description: 'ALL GOOGLE PIXEL SUPPORT – PUT QUANTITY AND EMAIL – DIRECT SOURCE', time: 'INSTANT', cost: 'R$16,30' },
+      { title: 'FRP BOSS TOOL CREDIT AUTO', description: 'FLASH | FRP | FACTORY – EXISTING USER ONLY – PUT QUANTITY AND USERNAME – DIRECT SOURCE', time: 'INSTANT', cost: 'R$15,95' },
+      { title: 'UNLOCK TOOL LICENSE 3 MONTHS', description: 'PUT EMAIL – DIRECT SOURCE', time: '1–12H', cost: 'R$165,80' },
+      { title: 'UNLOCK TOOL LICENSE 6 MONTHS', description: 'PUT EMAIL – DIRECT SOURCE', time: '1–12H', cost: '205,96' },
+      { title: 'UNLOCK TOOL LICENSE 12 MONTHS', description: 'PUT EMAIL – DIRECT SOURCE', time: '1–12H', cost: '335,75' }
+    ];
+
+    // ===== Função genérica para abrir lista em nova aba (mesmo estilo das suas abas) =====
+    function abrirListaEmAba(titulo, categoriasOuLista, isCategorias=false) {
+      const win = window.open('', '_blank');
+      if (!win) { alert('Não foi possível abrir a nova aba. Verifique os bloqueadores de pop-ups.'); return; }
+
+      let html = `
+        <!doctype html>
+        <html lang="pt-BR">
+        <head>
+          <meta charset="utf-8">
+          <meta name="viewport" content="width=device-width,initial-scale=1">
+          <title>${titulo} — Lubcell</title>
+          <style>
+            body { margin:0; font-family:Arial, sans-serif; background:#071025; color:#eaf3ff; padding:18px; }
+            .wrap { max-width:900px; margin:0 auto; }
+            .header { display:flex; justify-content:space-between; align-items:center; gap:12px; }
+            h1 { color:#4da8ff; margin:0; font-size:22px; }
+            p.lead { color:#cfe9ff; margin:6px 0 14px; }
+            .service-card { background:#0f2340; border-left:4px solid #4da8ff; padding:12px; margin:10px 0; border-radius:8px; }
+            .service-title { font-weight:700; color:#bfe4ff; margin-bottom:6px; }
+            .service-meta { font-size:13px; color:#d0e6ff; margin-bottom:8px; }
+            .service-actions { display:flex; gap:8px; flex-wrap:wrap; justify-content:center; } /* centraliza o botão */
+            .btn { padding:8px 12px; border-radius:6px; text-decoration:none; font-weight:600; border:none; cursor:pointer; }
+            .btn-whatsapp { background:#25D366; color:#042022; }
+            .btn-close { background:#4da8ff; color:#031022; }
+            .category { margin-top:14px; font-weight:700; color:#76c7ff; margin-bottom:8px; font-size:16px; }
+            .small { font-size:13px; color:#cfe9ff; margin-top:6px; }
+          </style>
+        </head>
+        <body>
+          <div class="wrap">
+            <div class="header">
+              <div>
+                <h1>${titulo}</h1>
+                <p class="lead">Clique em "Solicitar via WhatsApp" para abrir a conversa já com a mensagem pronta. Preencha os dados solicitados (IMEI/SN/ECID / e-mail / username / quantidade) antes de enviar.</p>
+              </div>
+              <div>
+                <button class="btn btn-close" onclick="window.close()">Fechar aba</button>
+              </div>
+            </div>
+      `;
+
+      if (isCategorias) {
+        // categoriasOrLista é array de categorias {category, items}
+        categoriasOuLista.forEach(cat => {
+          html += `<div class="category">${cat.category}</div>`;
+          cat.items.forEach(item => {
+            // Prepara mensagem especial para IMEI (com placeholder IMEI/SN/ECID)
+            const preMsg = `Olá, gostaria de solicitar o serviço: ${encodeURIComponent(item.title)}. IMEI/SN/ECID: [INFORMAR]. Por favor, confirmar o prazo e o valor (${encodeURIComponent(item.cost)}).`;
+            const waLink = `https://wa.me/${WA_NUMBER}?text=${preMsg}`;
+            html += `
+              <div class="service-card">
+                <div class="service-title">${item.title}</div>
+                <div class="service-meta">${item.description}</div>
+                <div class="small"><strong>Tempo:</strong> ${item.time} &nbsp; | &nbsp; <strong>Custo:</strong> ${item.cost}</div>
+                <div class="service-actions" style="margin-top:8px;">
+                  <a class="btn btn-whatsapp" href="${waLink}" target="_blank" rel="noopener">Solicitar via WhatsApp</a>
+                </div>
+              </div>
+            `;
+          });
+        });
+      } else {
+        // categoriasOuLista é lista simples de serviços
+        categoriasOuLista.forEach(item => {
+          // Monta mensagem dependendo do tipo (Aluguel ou Licenças)
+          // Para aluguel: peça confirmar período/quantidade; para licenças: pedir email/username/quantidade
+          const preMsg = `Olá, gostaria de adquirir/solicitar: ${encodeURIComponent(item.title)}. Tempo: ${encodeURIComponent(item.time)}. Valor: ${encodeURIComponent(item.cost)} créditos.`;
+          const waLink = `https://wa.me/${WA_NUMBER}?text=${preMsg}`;
+          html += `
+            <div class="service-card">
+              <div class="service-title">${item.title}</div>
+              <div class="service-meta">${item.description || ''}</div>
+              <div class="small"><strong>Tempo:</strong> ${item.time} &nbsp; | &nbsp; <strong>Custo:</strong> ${item.cost}</div>
+              <div class="service-actions" style="margin-top:8px;">
+                <a class="btn btn-whatsapp" href="${waLink}" target="_blank" rel="noopener">Solicitar via WhatsApp</a>
+              </div>
+            </div>
+          `;
+        });
+      }
+
+      html += `
+            <p style="margin-top:18px;color:#bcdffb;font-size:13px;">Obs: preencha os dados solicitados (IMEI/SN/ECID, e-mail, username ou quantidade) na mensagem antes de enviar.</p>
+          </div>
+        </body>
+        </html>
+      `;
+
+      win.document.open();
+      win.document.write(html);
+      win.document.close();
+      win.focus();
+    }
+
+    // ===== Funções específicas que chamam a genérica =====
+    function openImeiServices() {
+      abrirListaEmAba('🔓 Serviços IMEI', IMEI_SERVICES, true);
+    }
+
+    function openAluguelServices() {
+      abrirListaEmAba('🔐 Serviços de Aluguel', ALUGUEL_SERVICES, false);
+    }
+
+    function openLicencasDigitais() {
+      abrirListaEmAba('💳 Licenças Digitais', LICENCAS_SERVICES, false);
+    }
+
+    // As funções openLicencasDigitais() ou outras permanecem inalteradas — posso injetar conteúdo nelas quando quiser.
+	</script>
+
+	<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>	
+	<script>
+	netlifyIdentity.on('login', user => {
+    alert("Login realizado como: " + user.email);
+  });
+
+  netlifyIdentity.on('logout', () => {
+    alert("Você saiu da conta.");
+  });
+</script>
+
+<script>
+fetch("/.netlify/functions/gsm")
+  .then(r => r.json())
+  .then(data => {
+    console.log("Resposta da API GSM:", data);
+  });
+</script>
+
+</body>
+</html>
