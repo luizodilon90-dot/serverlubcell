@@ -1,7 +1,9 @@
+import fetch from "node-fetch";
+
 export async function handler(event, context) {
   try {
     const API_KEY = process.env.GSM_API_KEY;
-    const USERNAME = process.env.GSM_USERNAME; // crie essa variável também!
+    const USERNAME = process.env.GSM_USERNAME;
 
     const response = await fetch(
       "https://gsmmanager.com/public/api/services",
@@ -12,17 +14,15 @@ export async function handler(event, context) {
           "api-key": API_KEY,
           "user-name": USERNAME
         },
-        body: JSON.stringify({
-          // Aqui você coloca os parâmetros da API
-        })
+        body: JSON.stringify({})
       }
     );
 
-    const data = await response.json();
+    const json = await response.json();
 
     return {
       statusCode: 200,
-      body: JSON.stringify(data)
+      body: JSON.stringify(json)
     };
 
   } catch (err) {
